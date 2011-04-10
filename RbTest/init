@@ -1,0 +1,5 @@
+#ifndef _RbTest_icpp_init_stub
+#define _RbTest_icpp_init_stub
+#include "Core/init"
+#include "Rb/init"
+#endif

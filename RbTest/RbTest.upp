@@ -1,0 +1,12 @@
+description "example of embedded ruby vm\377";
+
+uses
+	Core,
+	Rb;
+
+file
+	RbTest.cpp;
+
+mainconfig
+	"" = "SSE2";
+

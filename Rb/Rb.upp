@@ -1,0 +1,47 @@
+description "Embedded Ruby VM\377";
+
+uses
+	Core;
+
+library
+	crypt,
+	m,
+	dl,
+	rt,
+	pthread;
+
+link
+	"-rdynamic -Wl,-export-dynamic",
+
+include
+	ruby-dist/include/ruby-1.9.1,
+	ruby-dist/include/ruby-1.9.1/x86_64-linux;
+
+file
+	Rb.cpp,
+	Rb.h,
+	ruby_headers readonly separator,
+	ruby-dist/include/ruby-1.9.1/ruby.h,
+	ruby-dist/include/ruby-1.9.1/ruby/defines.h,
+	ruby-dist/include/ruby-1.9.1/ruby/digest.h,
+	ruby-dist/include/ruby-1.9.1/ruby/dl.h,
+	ruby-dist/include/ruby-1.9.1/ruby/encoding.h,
+	ruby-dist/include/ruby-1.9.1/ruby/intern.h,
+	ruby-dist/include/ruby-1.9.1/ruby/io.h,
+	ruby-dist/include/ruby-1.9.1/ruby/missing.h,
+	ruby-dist/include/ruby-1.9.1/ruby/oniguruma.h,
+	ruby-dist/include/ruby-1.9.1/ruby/re.h,
+	ruby-dist/include/ruby-1.9.1/ruby/regex.h,
+	ruby-dist/include/ruby-1.9.1/ruby/ruby.h,
+	ruby-dist/include/ruby-1.9.1/ruby/st.h,
+	ruby-dist/include/ruby-1.9.1/ruby/util.h,
+	ruby-dist/include/ruby-1.9.1/ruby/version.h,
+	ruby-dist/include/ruby-1.9.1/ruby/vm.h,
+	ruby-dist/include/ruby-1.9.1/ruby/backward/rubyio.h,
+	ruby-dist/include/ruby-1.9.1/ruby/backward/rubysig.h,
+	ruby-dist/include/ruby-1.9.1/ruby/backward/st.h,
+	ruby-dist/include/ruby-1.9.1/ruby/backward/util.h,
+	ruby-dist/include/ruby-1.9.1/x86_64-linux/ruby/config.h,
+	ruby_lib readonly separator,
+	ruby-dist/lib/libruby-static.a;
+
