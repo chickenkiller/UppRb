@@ -11,11 +11,10 @@ library
 	pthread;
 
 link
-	"-rdynamic -Wl,-export-dynamic",
+	"-rdynamic -Wl,-export-dynamic";
 
 include
-	ruby-dist/include/ruby-1.9.1,
-	ruby-dist/include/ruby-1.9.1/x86_64-linux;
+	ruby-dist/include/ruby-1.9.1;
 
 file
 	Rb.cpp,
@@ -41,7 +40,7 @@ file
 	ruby-dist/include/ruby-1.9.1/ruby/backward/rubysig.h,
 	ruby-dist/include/ruby-1.9.1/ruby/backward/st.h,
 	ruby-dist/include/ruby-1.9.1/ruby/backward/util.h,
-	ruby-dist/include/ruby-1.9.1/x86_64-linux/ruby/config.h,
+	ruby-dist/include/ruby-1.9.1/ruby/config.h,
 	ruby_lib readonly separator,
 	ruby-dist/lib/libruby-static.a;
 
