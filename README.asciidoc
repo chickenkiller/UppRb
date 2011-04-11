@@ -22,7 +22,6 @@ These packages currently work under Linux only. They have been tested on the fol
 . Create symbolic links to the 2 folders in one of your assemblies (`MyApps` or `bazaar` for example)
 . Install Ruby 1.9 in the `Rb/ruby-dist` prefix. The easiest way to do so is to type:
 +
-[source,shell]
 -----
 make -C <path_to_assembly>/Rb
 -----
