@@ -1,0 +1,37 @@
+Embedded Ruby in U++
+====================
+Lionel Orry <lionel.orry@gmail.com>
+
+This repository contains two projects which aim at trying to embed a Ruby (1.9)
+virtual machine in C\++ applications written using the U++ framework.
+
+Instructions below are *mandatory* to make the project work correctly, so please
+*FOLLOW THESE INSTRUCTIONS!*
+
+== Support
+
+These packages currently work under Linux only. They have been tested on the following systems:
+
+* Gentoo (Funtoo) 64bits
+* Fedora 12 32bits
+
+== Installation instructions
+
+. *DO NOT OPEN THE `Rb` OR `RbTest` PROJECTS USING THEIDE YET!!!*
+. Clone this repository
+. Create symbolic links to the 2 folders in one of your assemblies (`MyApps` or `bazaar` for example)
+. Install Ruby 1.9 in the `Rb/ruby-dist` prefix. The easiest way to do so is to type:
++
+[source,shell]
+-----
+make -C <path_to_assembly>/Rb
+-----
++
+This will try to download, compile and install Ruby1.9 in the correct folder.
+
+. Once Ruby is successfully installed, fire up 'theIDE' and open the RbTest project
+. Compile it
+. Enjoy
+. Hack it
+. Enjoy more
+
