@@ -35,3 +35,4 @@ VALUE RubyVm::Eval(const String cmd)
 	}
 	return ret;
 }
+
