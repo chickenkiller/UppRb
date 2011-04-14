@@ -8,8 +8,7 @@ CONSOLE_APP_MAIN
 	RubyVm vm;
 	//vm.Eval("p String.instance_methods");
 	vm.Eval("p $:");
-	vm.Eval("def toto; puts 5/0; end; toto");
-	vm.Eval("require 'yaml'; puts [1,2,3,'hello'].to_yaml");
+	vm.Eval("require 'yaml'; puts [1,2,3,'hello', ['a','nested','array','with',{'hash'=>5}] ].to_yaml");
 	VALUE v = vm.Eval("'a ruby string'");
 	Cout() << RSTRING_PTR(v) << "\n";
 }
