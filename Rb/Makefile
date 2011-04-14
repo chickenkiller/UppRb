@@ -11,6 +11,7 @@ WGET=$(shell which wget 2>/dev/null)
 ruby-dist/lib/libruby-static.a: $(DIST)/libruby-static.a
 	$(MAKE) -C $(DIST) install
 	cd ruby-dist/include/ruby-1.9.1/ruby && ln -s ../*/ruby/config.h config.h
+	chmod a-w $@
 
 $(DIST)/libruby-static.a: $(DIST)/Makefile
 	$(MAKE) -j -C $(DIST)
